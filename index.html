@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Writes is a blog archive of long-form, transcript-driven essays on technology, space, and the future of intelligence.">
+    <title>AI Writes — Article Archive</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #0066cc;
+            --muted-color: #666666;
+            --card-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --header-bg: #1a1a1a;
+            --header-text: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --accent-color: #4da6ff;
+                --muted-color: #b0b0b0;
+                --card-bg: #2a2a2a;
+                --border-color: #404040;
+                --header-bg: #000000;
+                --header-text: #ffffff;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--header-bg), #333);
+            color: var(--header-text);
+            padding: 40px;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--muted-color);
+        }
+
+        .feed {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+
+        .card p {
+            margin: 0 0 18px 0;
+            color: var(--muted-color);
+        }
+
+        .meta {
+            font-size: 0.9em;
+            color: var(--muted-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                margin: -10px -10px 30px -10px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Writes</h1>
+        <div class="subtitle">Long-form essays distilled from deep technical conversations</div>
+    </div>
+
+    <div class="intro">
+        A growing archive of transcript-driven articles that unpack the biggest ideas in AI, space, and hardware. Each post is structured for clarity, with a focus on practical takeaways and long-term implications.
+    </div>
+
+    <section class="feed" aria-label="Article feed">
+        <article class="card">
+            <h2><a href="elon-musk-dwarkesh-blog.html">The Future is Orbital</a></h2>
+            <p>Elon Musk’s vision for space-based AI covers orbital data centers, power constraints, launch economics, and the robotics-driven future of manufacturing.</p>
+            <div class="meta">Based on the Dwarkesh Patel Podcast with John Collison Co-Interview</div>
+        </article>
+    </section>
+</body>
+</html>
