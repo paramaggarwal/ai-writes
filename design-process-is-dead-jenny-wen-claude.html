@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A structured recap of Jenny Wen's conversation on how AI is reshaping product design, why the old discovery-to-mock workflow is fading, and what designers should build next.">
+    <title>The Design Process Is Dead: What Jenny Wen Says Comes Next</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #0066cc;
+            --quote-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --header-bg: #1a1a1a;
+            --header-text: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --accent-color: #4da6ff;
+                --quote-bg: #2a2a2a;
+                --border-color: #404040;
+                --header-bg: #000000;
+                --header-text: #ffffff;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--header-bg), #333);
+            color: var(--header-text);
+            padding: 40px;
+            margin: -20px -20px 40px -20px;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .key-points {
+            background: var(--quote-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .key-points h4 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .toc {
+            background: var(--quote-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 40px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                margin: -10px -10px 30px -10px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Design Process Is Dead: What Comes Next</h1>
+        <div class="subtitle">Jenny Wen on AI-native design, changing team structure, and how product craft evolves at Claude</div>
+        <div class="meta">Based on Lenny's Podcast interview with Jenny Wen, Head of Design at Claude</div>
+    </div>
+
+    <div class="intro">
+        In this conversation with Lenny Rachitsky, Jenny Wen makes a direct claim: the classic design arc—research, mock, review, iterate—is no longer the center of product work. As language models become stronger and engineers prototype faster, design is shifting from static deliverables to continuous, in-product decision making. The role does not disappear, but its leverage point moves. Designers become orchestrators of direction, behavior, and quality inside living systems.
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+        <h2>Quick Navigation</h2>
+        <ul>
+            <li><a href="#why-old-process-breaks">Why the old design process breaks in AI products</a></li>
+            <li><a href="#new-work">The two kinds of design work rising now</a></li>
+            <li><a href="#daily-stack">A new day-to-day workflow and tool stack</a></li>
+            <li><a href="#taste-judgment">Taste, judgment, and the human edge</a></li>
+            <li><a href="#ic-move">Why moving from director to IC made sense</a></li>
+            <li><a href="#hiring">What Jenny is hiring for</a></li>
+            <li><a href="#chat-ui">Why chat interfaces may last longer than expected</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <div class="section">
+        <h2 id="why-old-process-breaks">Why the Old Design Process Breaks in AI Products</h2>
+        <p>
+            The old process assumed relatively stable requirements and predictable user flows. AI products violate both assumptions. Capabilities change weekly, model behavior is probabilistic, and user intent is often open-ended. In that environment, polished mockups can become obsolete before implementation begins.
+        </p>
+        <p>
+            Wen frames this as a speed-and-feedback mismatch: teams can now generate interfaces rapidly, but still need strong product judgment about what to ship, what to simplify, and what to trust. The bottleneck is less drawing UI and more deciding which interaction patterns are robust under uncertainty.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="new-work">The Two Kinds of Design Work Rising Now</h2>
+        <p>
+            A recurring idea in the discussion is that design work is splitting into two complementary tracks.
+        </p>
+        <div class="key-points">
+            <h4>Track 1: System shaping</h4>
+            <ul>
+                <li>Defining principles, guardrails, and behavior standards for AI interactions.</li>
+                <li>Designing confidence, fallback, and recovery states—not just happy paths.</li>
+                <li>Creating repeatable quality bars teams can use as models and features change.</li>
+            </ul>
+        </div>
+        <div class="key-points">
+            <h4>Track 2: High-velocity prototyping</h4>
+            <ul>
+                <li>Working directly with engineers in live builds instead of handing off static files.</li>
+                <li>Testing many interaction variants quickly, then tightening based on usage signals.</li>
+                <li>Prioritizing clarity and reliability over ornamental polish early in the cycle.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="daily-stack">A New Day-to-Day Workflow and Tool Stack</h2>
+        <p>
+            Wen describes a practical, AI-heavy workflow: using model-assisted drafting, collaborative coding tools, and fast product loops to compress the distance between concept and testable experience. In this model, the designer spends less time preparing a perfect artifact and more time steering product behavior in real context.
+        </p>
+        <p>
+            This shifts collaboration norms. Engineers are no longer downstream recipients of design; they are often co-authors in the earliest decisions. Designers who thrive are the ones who can hold product intent while operating fluently inside technical constraints.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="taste-judgment">Taste, Judgment, and the Human Edge</h2>
+        <p>
+            One of the most important questions in the episode is whether AI will surpass humans in taste. Wen's position is nuanced: models may become better at pattern reproduction and broad synthesis, but taste in product still depends on contextual judgment—what matters for this user, at this moment, for this brand, with this risk tolerance.
+        </p>
+        <p>
+            In practice, that means human designers continue to matter most at the decision layer: framing tradeoffs, selecting what not to build, and preserving coherence as products scale.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="ic-move">Why Returning to IC Work Can Be Strategic</h2>
+        <p>
+            Wen's move from a design director role at Figma to an IC role at Anthropic reflects a broader AI-era pattern: when platforms are shifting quickly, proximity to the craft can matter more than managerial scope. Hands-on builders get earlier signal, learn faster from product reality, and influence fundamentals before processes harden.
+        </p>
+        <p>
+            It is not a step backward. It is a different leverage model: fewer layers, tighter loops, and direct ownership over what users actually experience.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="hiring">The New Hiring Archetypes for Designers</h2>
+        <p>
+            The conversation outlines a hiring shift toward hybrid operators rather than narrow role definitions.
+        </p>
+        <div class="key-points">
+            <h4>Signals teams now value</h4>
+            <ul>
+                <li><strong>Product shapers:</strong> people who can define direction in ambiguous spaces.</li>
+                <li><strong>Builder-designers:</strong> people comfortable prototyping with code and models.</li>
+                <li><strong>Quality stewards:</strong> people who enforce consistency, trust, and UX integrity at scale.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="chat-ui">Why Chat Interfaces May Endure</h2>
+        <p>
+            Many people treat chat as temporary scaffolding, but Wen argues it may remain a durable control surface for AI systems. The reason is flexibility: language adapts to messy intent better than rigid menus. As long as users need to express nuanced goals, conversation remains a powerful interface primitive.
+        </p>
+        <p>
+            The likely future is hybrid: chat as a coordination layer, with structured UI where precision and repeatability matter most.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="conclusion">Conclusion</h2>
+        <p>
+            Jenny Wen's central message is not anti-design. It is anti-lag. The teams that win in AI will shorten the distance between intent, prototype, and learning. Design's value moves from producing static artifacts to shaping live systems: behavior, trust, and clarity under uncertainty. In that world, taste still matters—but only when paired with technical fluency and fast execution.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--border-color); color: var(--accent-color); font-style: italic;">
+        Based on the publicly available episode material and transcript summary for<br>
+        "The design process is dead. Here's what's replacing it" by Lenny's Podcast
+    </div>
+</body>
+</html>
